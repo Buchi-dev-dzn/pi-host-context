@@ -1,0 +1,49 @@
+{
+  "name": "pi-host-context",
+  "version": "0.1.0",
+  "description": "Detect which app launched Pi (Rex, Orca, WezTerm, ...), load host-specific instructions after AGENTS.md, and show the host in the footer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Buchi-dev-dzn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Buchi-dev-dzn/pi-host-context.git"
+  },
+  "homepage": "https://github.com/Buchi-dev-dzn/pi-host-context#readme",
+  "bugs": {
+    "url": "https://github.com/Buchi-dev-dzn/pi-host-context/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "agents-md",
+    "context",
+    "rex",
+    "orca",
+    "terminal"
+  ],
+  "files": [
+    "index.ts",
+    "detect.ts",
+    "instructions.ts",
+    "footer.ts",
+    "hosts/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "scripts": {
+    "test": "node --test host-context.test.mjs"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
